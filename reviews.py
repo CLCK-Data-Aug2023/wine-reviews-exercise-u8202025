@@ -8,4 +8,5 @@ avg = reviews.groupby('country')['points'].mean().round(1)
 combine = pd.DataFrame({'count': counts, 'points': avg})
 table = combine.sort_values(by='count', ascending=False)
 table.index.name = 'country'
-table.reset_index().to_csv("reviews-per-country.csv", index=False)
+table.reset_index().to_csv("data/reviews-per-country.csv", index=False)
+
